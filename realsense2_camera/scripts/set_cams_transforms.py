@@ -48,7 +48,7 @@ def print_status(status):
 
 def publish_status(broadcaster, status):
     static_transformStamped = geometry_msgs.msg.TransformStamped()
-    static_transformStamped.header.stamp = rospy.Time.now()
+    static_transformStamped.header.stamp = rclpy.Time.time()
     static_transformStamped.header.frame_id = from_cam
 
     static_transformStamped.child_frame_id = to_cam
